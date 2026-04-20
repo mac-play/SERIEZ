@@ -1,6 +1,9 @@
   { nome: "ceara", valor: "R$ 300K" },
             { nome: "Fortaleza", valor: "R$ 290K" },
             { nome: "juventude", valor: "R$ 250K" },  { nome: "Sport", valor: "R$ 250K" },
-            { nome: "Nautico", valor: " R$ 200K" },
-            { nome: "Ponte preta", valor: "R$ 200K" }.
-
+            { nome: "Nautico", valor: " R$ comprado" },
+            { nome: "Ponte preta", valor: "R$ 200K" }
+ { nome: "Botafogo", valor: " R$ 2000k" },
+            { nome: "Flamengo", valor: "R$ 2200K" }
+ { nome: "internacional", valor: " R$ 980k" },
+            { nome: "Atlético Mineiro", valor: "R$ 950k" }.

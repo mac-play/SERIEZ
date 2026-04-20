@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalador de Times - Pro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        :root {
+            --campo-verde: #2e7d32;
+            --linha-branca: rgba(255, 255, 255, 0.6);
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a1a; color: white; text-align: center; padding-bottom: 50px; }
+        
+        .controles { margin: 20px; padding: 15px; background: #252525; border-radius: 10px; display: inline-block; }
+
+        /* Área de Captura (O que será salvo na foto) */
+        #area-print {
+            padding: 20px;
+            background: #1a1a1a;
+            display: inline-block;
+            border-radius: 15px;
+        }
+
+        #container-campo {
+            position: relative;
+            width: 350px;
+            height: 500px;
+            background-color: var(--campo-verde);
+            border: 4px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(var(--linha-branca) 2px, transparent 2px),
+                radial-gradient(circle at 50% 50%, transparent 40px, var(--linha-branca) 40px, var(--linha-branca) 42px, transparent 42px);
+            background-size: 100% 50%, 100% 100%;
+        }
+
+        /* Círculos dos Jogadores */
+        .posicao {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00e676;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: bold;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            padding: 2px;
+            word-wrap: break-word;
+        }
+
+        .posicao:hover { border-color: gold; transform: translate(-50%, -50%) scale(1.1); }
+
+        /* Menu de Jogadores */
+        #lista-suspensa {
+            display: none;
+            position: fixed;
+            background: #333;
+            border: 1px solid #555;
+            padding: 5px;
+            z-index: 1000;
+            border-radius: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        #lista-suspensa div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #444;
+            font-size: 14px;
+        }
+
+        #lista-suspensa div:hover { background: #00e676; color: black; }
+
+        button#btn-salvar {
+            background: #d32f2f;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button#btn-salvar:hover { background: #ff5252; }
+
+        select { padding: 8px; border-radius: 5px; background: #333; color: white; border: 1px solid #555; }
+    </style>
+</head>
+<body>
+
+    <div class="controles">
+        <label>Esquema Tático:</label>
+        <select id="formacao" onchange="atualizarCampo()">
+            <option value="4-3-3">4-3-3</option>
+            <option value="4-4-2">4-4-2</option>
+            <option value="3-5-2">3-5-2</option>
+            <option value="3-4-3">3-4-3</option>
+            <option value="3-6-1">3-6-1</option>
+            <option value="4-5-1">4-5-1</option>
+            <option value="5-3-2">5-3-2</option>
+            <option value="5-2-3">5-2-3</option>
+            <option value="5-4-1">5-4-1</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div id="area-print">
+        <div id="container-campo"></div>
+    </div>
+
+    <br>
+
+    <button id="btn-salvar" onclick="salvarEscalacao()">SALVAR</button>
+
+    <div id="lista-suspensa"></div>
+
+    <script>
+        // Dados inseridos diretamente para evitar instabilidade com RAW/Github
+        const dadosJogadores = {
+            goleiros: "A. Rossi, Dyego Alves, Andrew",
+            defensores: "Danilo, Léo Ortiz, Emerson Royal, Ayrton Lucas, Léo Pereira, Vitao, Alex Sandro, G. Varela",
+            meias: "Erick Pulgar, Jorginho, De Arrascaeta, Saúl Ñíguez, Lucas Paquetá, Evertton Araújo, De La Cruz, Jorge Carrascal",
+            atacantes: "Gonzalo Plata, Samuel Lino, Pedro, Luiz Araújo, E. Cebolinha, Bruno Henrique"
+        };
+
+        const campo = document.getElementById('container-campo');
+        const lista = document.getElementById('lista-suspensa');
+
+        function atualizarCampo() {
+            campo.innerHTML = '';
+            const form = document.getElementById('formacao').value.split('-').map(Number);
+            
+            criarCirculo(90, 50, 'goleiros');
+            distribuirLinha(form[0], 72, 'defensores');
+            distribuirLinha(form[1], 45, 'meias');
+            distribuirLinha(form[2], 18, 'atacantes');
+        }
+
+        function distribuirLinha(qtd, alturaPercent, tipo) {
+            for (let i = 1; i <= qtd; i++) {
+                let largura = (100 / (qtd + 1)) * i;
+                criarCirculo(alturaPercent, largura, tipo);
+            }
+        }
+
+        function criarCirculo(top, left, tipo) {
+            const div = document.createElement('div');
+            div.className = 'posicao';
+            div.style.top = top + "%";
+            div.style.left = left + "%";
+            div.innerText = "SELECIONAR";
+            
+            div.onclick = (e) => {
+                e.stopPropagation();
+                mostrarJogadores(e, tipo);
+            };
+            campo.appendChild(div);
+        }
+
+        function mostrarJogadores(e, tipo) {
+            lista.style.display = 'block';
+            lista.style.top = e.clientY + 'px';
+            lista.style.left = e.clientX + 'px';
+            
+            const nomes = dadosJogadores[tipo].split(', ');
+            
+            lista.innerHTML = `<div style="background:#111; color:gold; font-weight:bold;">${tipo.toUpperCase()}</div>`;
+            nomes.forEach(nome => {
+                const item = document.createElement('div');
+                item.innerText = nome;
+                item.onclick = () => {
+                    e.target.innerText = nome;
+                    lista.style.display = 'none';
+                };
+                lista.appendChild(item);
+            });
+        }
+
+        // Função para converter a DIV em Imagem e baixar
+        function salvarEscalacao() {
+            const areaParaSalvar = document.getElementById('area-print');
+            
+            html2canvas(areaParaSalvar, {
+                backgroundColor: "#1a1a1a",
+                scale: 2 // Melhora a qualidade da imagem
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'minha-escalacao.png';
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            });
+        }
+
+        window.onclick = () => { lista.style.display = 'none'; };
+        atualizarCampo();
+    </script>
+</body>
+</html>

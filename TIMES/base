@@ -134,12 +134,7 @@
 
     <script>
         // Dados inseridos diretamente para evitar instabilidade com RAW/Github
-        const dadosJogadores = {
-            goleiros: "A. Rossi, Dyego Alves, Andrew",
-            defensores: "Danilo, Léo Ortiz, Emerson Royal, Ayrton Lucas, Léo Pereira, Vitao, Alex Sandro, G. Varela",
-            meias: "Erick Pulgar, Jorginho, De Arrascaeta, Saúl Ñíguez, Lucas Paquetá, Evertton Araújo, De La Cruz, Jorge Carrascal",
-            atacantes: "Gonzalo Plata, Samuel Lino, Pedro, Luiz Araújo, E. Cebolinha, Bruno Henrique"
-        };
+        const dadosJogadores = 👉COLE AQUI👈;
 
         const campo = document.getElementById('container-campo');
         const lista = document.getElementById('lista-suspensa');

@@ -4,6 +4,10 @@
             { nome: "Nautico", valor: "negociação avançada" },
             { nome: "Ponte preta", valor: "R$ 200K" }
  { nome: "Botafogo", valor: " R$ 2000k" },
-            { nome: "Flamengo", valor: "R$ 2200K" }
+            { nome: "Flamengo", valor: "R$ 2200K" },
  { nome: "internacional", valor: " R$ 980k" },
-            { nome: "Atlético Mineiro", valor: "R$ 950k" }.
+            { nome: "Atlético Mineiro", valor: "R$ 950k" },
+{ nome: "Botafogo", valor: " R$ 2000k" },
+            { nome: "São Paulo", valor: "R$ 1200K" }
+ { nome: "Uberlândia", valor: " R$ 40k" },
+            { nome: "santa Cruz", valor: "R$ 95k" }.

@@ -1,1 +1,6 @@
-..
+  { nome: "ceara", valor: "R$ 300K" },
+            { nome: "Fortaleza", valor: "R$ 290K" },
+            { nome: "juventude", valor: "R$ 250K" },  { nome: "Sport", valor: "R$ 250K" },
+            { nome: "Nautico", valor: " R$ 200K" },
+            { nome: "Ponte preta", valor: "R$ 200K" }.
+

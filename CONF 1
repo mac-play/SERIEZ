@@ -1,7 +1,7 @@
-  { nome: "ceara", valor: "R$ 300K" },
+  { nome: "ceara", valor: "negociação" },
             { nome: "Fortaleza", valor: "R$ 290K" },
             { nome: "juventude", valor: "R$ 250K" },  { nome: "Sport", valor: "R$ 250K" },
-            { nome: "Nautico", valor: " R$ comprado" },
+            { nome: "Nautico", valor: "negociação avançada" },
             { nome: "Ponte preta", valor: "R$ 200K" }
  { nome: "Botafogo", valor: " R$ 2000k" },
             { nome: "Flamengo", valor: "R$ 2200K" }

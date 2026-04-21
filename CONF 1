@@ -1,4 +1,4 @@
-  { nome: "ceara", valor: "negociação" },
+  { nome: "Santos", valor: "1700K" },
             { nome: "Fortaleza", valor: "R$ 290K" },
             { nome: "juventude", valor: "R$ 250K" },  { nome: "Sport", valor: "R$ 250K" },
             { nome: "Nautico", valor: "negociação avançada" },
@@ -9,5 +9,5 @@
             { nome: "Atlético Mineiro", valor: "R$ 950k" },
 { nome: "Botafogo", valor: " R$ 2000k" },
             { nome: "São Paulo", valor: "R$ 1200K" }
- { nome: "Uberlândia", valor: " R$ 40k" },
+ { nome: "Caxias", valor: " R$ 45k" },
             { nome: "santa Cruz", valor: "R$ 95k" }.

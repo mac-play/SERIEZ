@@ -6,5 +6,9 @@
 ,{ nome: "BAURU", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"}
 ,{ nome: "KAIN", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"}
 ,{ nome: "ROMA", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"},{ nome: "FILIPE LUÍS", valor: "50K", postura : "ofensivo", temperamento: "calmo", Tipo: "Desenvolvedor de Ataque", Carreira : "Flamengo"},
-{ nome: "TITE", valor: "45K", postura : "defensivo", temperamento: "calmo", Tipo: "Desenvolvedor de Defesa", Carreira : "Corinthians+Flamengo"},{ nome: "ABEL FERREIRA", valor: "50K", postura : "ofensivo", temperamento: "agressivo", Tipo: "Desenvolvedor  técnico", Carreira : "Palmeiras,"}.
+{ nome: "TITE", valor: "45K", postura : "defensivo", temperamento: "calmo", Tipo: "Desenvolvedor de Defesa", Carreira : "Corinthians+Flamengo"},{ nome: "ABEL FERREIRA", valor: "50K", postura : "ofensivo", temperamento: "agressivo", Tipo: "Desenvolvedor  técnico", Carreira : "Palmeiras,"}
+
+
+{ nome: "HELIO DOS ANJOS", valor: "20K", postura : "ofensivo", temperamento: "nervoso", Tipo: "força total", Carreira : "paysandu+  Náutico+ ponte preta"},
+{ nome: "PIVETE", valor: "25K", postura : "defensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "Nautico+ Flamengo"},{ nome: "MARCIO GOIANO", valor: "10K", postura : "ofensivo", temperamento: "agressivo", Tipo: "maximizador de desempenho", Carreira : "Náutico+ Sport"}.
             

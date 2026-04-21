@@ -1,13 +1,13 @@
-  { nome: "Santos", valor: "1700K" },
-            { nome: "Fortaleza", valor: "Negociação avançada" },
+  { nome: "vasco", valor: "1700K" },
+            { nome: "Fortaleza", valor: "450k" },
             { nome: "juventude", valor: "R$ 250K" },  { nome: "Sport", valor: "R$ 250K" },
-            { nome: "Nautico", valor: "negociação avançada" },
+            { nome: "Nautico", valor: "400k" },
             { nome: "Ponte preta", valor: "R$ 200K" }
  { nome: "Botafogo", valor: " R$ 2000k" },
-            { nome: "Flamengo", valor: "Negociação" },
+            { nome: "Palmeiras", valor: "2300k" },
  { nome: "internacional", valor: " R$ 980k" },
             { nome: "Atlético Mineiro", valor: "R$ 950k" },
 { nome: "Botafogo", valor: " R$ 2000k" },
             { nome: "São Paulo", valor: "R$ 1200K" }
- { nome: "Caxias", valor: " R$ 45k" },
+ { nome: "São Bernardo", valor: " R$ 120k" },
             { nome: "santa Cruz", valor: "R$ 95k" }.

@@ -5,7 +5,7 @@
 , { nome: "DENISIO", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"}
 ,{ nome: "BAURU", valor: "treinador do FLAMENGO", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"}
 ,{ nome: "KAIN", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"}
-,{ nome: "ROMA", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"},{ nome: "FILIPE LUÍS", valor: "50K", postura : "ofensivo", temperamento: "calmo", Tipo: "Desenvolvedor de Ataque", Carreira : "Flamengo"},
+,{ nome: "ROMA (Flamengo)", valor: "2K", postura : "ofensivo", temperamento: "calmo", Tipo: "gestor de elenco", Carreira : "academia CBD"},{ nome: "FILIPE LUÍS", valor: "50K", postura : "ofensivo", temperamento: "calmo", Tipo: "Desenvolvedor de Ataque", Carreira : "Flamengo"},
 { nome: "TITE", valor: "45K", postura : "defensivo", temperamento: "calmo", Tipo: "Desenvolvedor de Defesa", Carreira : "Corinthians>Flamengo"},{ nome: "ABEL FERREIRA", valor: "50K", postura : "ofensivo", temperamento: "agressivo", Tipo: "Desenvolvedor  técnico", Carreira : "Palmeiras,"}
 
 
